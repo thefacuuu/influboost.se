@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     * { margin:0; padding:0; box-sizing:border-box; }
-    html, body { height:100%; font-family:'Inter','Helvetica Neue',sans-serif; overflow:hidden; background-color:#050505; color:white; }
+    html, body { font-family:'Inter','Helvetica Neue',sans-serif; background-color:#050505; color:white; overflow-x:hidden; }
 
     /* Fondo moderno */
     .gradient-background { position:absolute; top:0; left:0; width:100%; height:100%; z-index:1; overflow:hidden; }
@@ -29,8 +29,8 @@
     .logo-animado { height:42px; animation:pulse 1.2s infinite; filter:drop-shadow(0 0 18px #6a11cb); }
 
     /* Carrusel Vertical */
-    .main-content { display:flex; justify-content:center; align-items:flex-start; width:100%; height:100vh; padding-top:60px; z-index:10; position:relative; overflow-y:auto; }
-    .carousel-container { width:100%; max-width:400px; display:flex; flex-direction:column; align-items:center; gap:20px; padding-bottom:50px; }
+    .main-content { display:flex; flex-direction:column; align-items:center; width:100%; padding-top:70px; z-index:10; position:relative; gap:40px; }
+    .carousel-container { width:100%; max-width:400px; display:flex; flex-direction:column; align-items:center; gap:20px; }
     .carousel-card { width:95%; padding:15px; border-radius:12px; font-weight:600; text-align:center; background:linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0.1)); color:#fff; border:1px solid rgba(255,255,255,0.1); box-shadow:0 6px 20px rgba(0,0,0,0.3); backdrop-filter:blur(4px); transition:transform 0.3s; }
     .basico { background:linear-gradient(145deg, rgba(0,123,255,0.6), rgba(0,123,255,0.3)); box-shadow:0 6px 18px rgba(0,123,255,0.5);}
     .pro { background:linear-gradient(145deg, rgba(0,255,123,0.6), rgba(0,255,123,0.3)); box-shadow:0 6px 18px rgba(0,255,123,0.5);}
@@ -41,6 +41,11 @@
     .carousel-card button.details-btn { margin-top:8px; padding:7px 14px; border:none; border-radius:6px; background:#6a11cb; color:white; font-weight:600; cursor:pointer; transition:0.3s; }
     .carousel-card button.details-btn:hover { background:#9d4edd; transform:scale(1.05); }
     .carousel-card .benefits { display:none; }
+
+    /* Secciones adicionales */
+    .section { width:100%; padding:50px 20px; text-align:center; background:linear-gradient(120deg, #1a1a1a, #333); color:white; }
+    .section h2 { font-size:1.8em; margin-bottom:20px; }
+    .section p { font-size:1em; line-height:1.5em; }
 
     /* Modal */
     .modal { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); justify-content:center; align-items:center; z-index:50; padding:15px; overflow:auto; opacity:0; transition:opacity 0.4s; }
@@ -54,7 +59,6 @@
     @media(max-width:600px){
       .logo-animado{height:38px;}
       .header-bar{top:10px;}
-      .main-content{padding-top:50px;}
       .carousel-card{width:90%; padding:12px; font-size:0.85em; border-radius:10px;}
       .carousel-card .title{font-size:1.1em;}
       .carousel-card .price{font-size:1.3em;}
@@ -127,6 +131,13 @@
         <button class="details-btn">Ver Detalles</button>
         <div class="benefits">🔑 Características y beneficios completos para Plan Premium aquí.</div>
       </div>
+    </div>
+
+    <!-- Nueva sección para scroll -->
+    <div class="section">
+      <h2>Más Información</h2>
+      <p>Aquí podrás agregar contenido extra, promociones, testimonios o lo que quieras. 
+      La página ahora se puede deslizar hacia abajo para ver más contenido.</p>
     </div>
   </div>
 
