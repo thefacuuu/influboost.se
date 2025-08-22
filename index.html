@@ -25,59 +25,53 @@
     .particle { position:absolute; background:white; border-radius:50%; opacity:0; pointer-events:none; }
 
     /* Header */
-    .header-bar { position:fixed; top:10px; left:0; width:100%; padding:10px 20px; display:flex; align-items:center; justify-content:flex-start; z-index:10; background:transparent; }
-    .logo-animado { height:50px; animation:pulse 1.2s infinite; filter:drop-shadow(0 0 18px #6a11cb); }
+    .header-bar { position:fixed; top:5px; left:0; width:100%; padding:10px 20px; display:flex; align-items:center; justify-content:flex-start; z-index:10; background:transparent; }
+    .logo-animado { height:45px; animation:pulse 1.2s infinite; filter:drop-shadow(0 0 18px #6a11cb); }
 
     /* Carrusel */
-    .main-content { display:flex; justify-content:center; align-items:center; width:100%; height:100vh; padding-top:60px; z-index:10; position:relative; }
-    .carousel-container { width:100%; max-width:560px; perspective:1200px; display:flex; justify-content:center; align-items:center; flex-direction:column; touch-action:pan-x; user-select:none; }
-    #carousel { width:100%; height:400px; display:flex; justify-content:center; align-items:center; position:relative; transition: transform 0.7s cubic-bezier(.77,0,.18,1); cursor:grab; }
-    .carousel-card { position:absolute; top:0; left:50%; transform:translateX(-50%); width:95%; height:auto; border-radius:20px; font-weight:600; text-align:center; padding:25px; transition: transform 0.7s, opacity 0.7s, filter 0.7s; z-index:1; opacity:0.5; filter:blur(0.5px); pointer-events:none; border:1px solid rgba(255,255,255,0.1); box-shadow:0 8px 30px rgba(0,0,0,0.3); backdrop-filter:blur(4px); color:#fff; background:linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0.1)); }
-    .basico { background:linear-gradient(145deg, rgba(0,123,255,0.6), rgba(0,123,255,0.3)); box-shadow:0 8px 25px rgba(0,123,255,0.5);}
-    .pro { background:linear-gradient(145deg, rgba(0,255,123,0.6), rgba(0,255,123,0.3)); box-shadow:0 8px 25px rgba(0,255,123,0.5);}
-    .premium { background:linear-gradient(145deg, rgba(255,123,0,0.6), rgba(255,123,0,0.3)); box-shadow:0 8px 25px rgba(255,123,0,0.5);}
-    .carousel-card.active { transform:translateX(-50%) scale(1.05); opacity:1; z-index:3; filter:none; pointer-events:auto; box-shadow:0 16px 50px rgba(0,0,0,0.65); }
-    .carousel-card.left { transform:translateX(-120%) scale(0.85) rotateY(18deg); opacity:0.6; z-index:2; filter:blur(1px); }
-    .carousel-card.right { transform:translateX(20%) scale(0.85) rotateY(-18deg); opacity:0.6; z-index:2; filter:blur(1px); }
-    .carousel-card .title { font-size:1.6em; font-weight:700; margin-bottom:10px; }
-    .carousel-card .price { font-size:1.9em; font-weight:700; margin-bottom:10px; color:#ffd700; }
-    .carousel-card .desc { font-size:1.1em; color:#ddd; margin-bottom:12px; line-height:1.4em; }
-    .carousel-card button.details-btn { margin-top:15px; padding:10px 20px; border:none; border-radius:8px; background:#6a11cb; color:white; font-weight:600; cursor:pointer; transition:0.3s; }
+    .main-content { display:flex; justify-content:center; align-items:flex-start; width:100%; height:100vh; padding-top:50px; z-index:10; position:relative; }
+    .carousel-container { width:100%; max-width:480px; perspective:1200px; display:flex; justify-content:center; align-items:center; flex-direction:column; touch-action:pan-x; user-select:none; }
+    #carousel { width:100%; height:350px; display:flex; justify-content:center; align-items:center; position:relative; transition: transform 0.7s cubic-bezier(.77,0,.18,1); cursor:grab; }
+    .carousel-card { position:absolute; top:0; left:50%; transform:translateX(-50%); width:90%; height:auto; border-radius:15px; font-weight:600; text-align:center; padding:20px; transition: transform 0.7s, opacity 0.7s, filter 0.7s; z-index:1; opacity:0.5; filter:blur(0.5px); pointer-events:none; border:1px solid rgba(255,255,255,0.1); box-shadow:0 8px 25px rgba(0,0,0,0.3); backdrop-filter:blur(4px); color:#fff; background:linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0.1)); }
+    .basico { background:linear-gradient(145deg, rgba(0,123,255,0.6), rgba(0,123,255,0.3)); box-shadow:0 6px 20px rgba(0,123,255,0.5);}
+    .pro { background:linear-gradient(145deg, rgba(0,255,123,0.6), rgba(0,255,123,0.3)); box-shadow:0 6px 20px rgba(0,255,123,0.5);}
+    .premium { background:linear-gradient(145deg, rgba(255,123,0,0.6), rgba(255,123,0,0.3)); box-shadow:0 6px 20px rgba(255,123,0,0.5);}
+    .carousel-card.active { transform:translateX(-50%) scale(1); opacity:1; z-index:3; filter:none; pointer-events:auto; box-shadow:0 12px 40px rgba(0,0,0,0.6); }
+    .carousel-card.left { transform:translateX(-120%) scale(0.8) rotateY(15deg); opacity:0.5; z-index:2; filter:blur(1px); }
+    .carousel-card.right { transform:translateX(20%) scale(0.8) rotateY(-15deg); opacity:0.5; z-index:2; filter:blur(1px); }
+    .carousel-card .title { font-size:1.3em; font-weight:700; margin-bottom:8px; }
+    .carousel-card .price { font-size:1.6em; font-weight:700; margin-bottom:8px; color:#ffd700; }
+    .carousel-card .desc { font-size:1em; color:#ddd; margin-bottom:10px; line-height:1.3em; }
+    .carousel-card button.details-btn { margin-top:10px; padding:8px 16px; border:none; border-radius:6px; background:#6a11cb; color:white; font-weight:600; cursor:pointer; transition:0.3s; }
     .carousel-card button.details-btn:hover { background:#9d4edd; transform:scale(1.05); }
     .carousel-card .benefits { display:none; }
 
     /* Modal */
-    .modal { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); justify-content:center; align-items:center; z-index:50; padding:20px; overflow:auto; opacity:0; transition:opacity 0.4s; }
+    .modal { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); justify-content:center; align-items:center; z-index:50; padding:15px; overflow:auto; opacity:0; transition:opacity 0.4s; }
     .modal.show { display:flex; opacity:1; }
-    .modal-content { background:#111; border-radius:15px; padding:25px; max-width:600px; width:100%; color:#fff; position:relative; transform:scale(0.9); transition:transform 0.4s; }
+    .modal-content { background:#111; border-radius:12px; padding:20px; max-width:500px; width:100%; color:#fff; position:relative; transform:scale(0.9); transition:transform 0.4s; }
     .modal.show .modal-content { transform:scale(1); }
-    .modal-content h2 { margin-bottom:15px; }
-    .modal-content p, .modal-content li { margin-bottom:10px; }
-    .close-btn { position:absolute; top:15px; right:20px; font-size:1.5em; cursor:pointer; color:#fff; }
+    .modal-content h2 { margin-bottom:12px; }
+    .modal-content p, .modal-content li { margin-bottom:8px; }
+    .close-btn { position:absolute; top:10px; right:15px; font-size:1.3em; cursor:pointer; color:#fff; }
 
-    /* Mobile ajustado */
+    /* Mobile */
     @media(max-width:600px){
-      .logo-animado{height:50px;}
-      .header-bar{top:10px;}
-      .main-content{padding-top:60px;}
-      #carousel{height:auto; top:0;}
-      .carousel-card{
-        width:90%;
-        padding:15px;
-        font-size:0.95em;
-        border-radius:12px;
-      }
-      .carousel-card .title{font-size:1.3em;}
-      .carousel-card .price{font-size:1.5em;}
+      .logo-animado{height:40px;}
+      .header-bar{top:5px;}
+      .main-content{padding-top:40px;}
+      #carousel{height:auto;}
+      .carousel-card{width:85%; padding:15px; font-size:0.9em; border-radius:12px;}
+      .carousel-card .title{font-size:1.2em;}
+      .carousel-card .price{font-size:1.4em;}
       .carousel-card .desc{font-size:0.95em;}
       .carousel-card.active{transform:translateX(-50%) scale(1);}
-      .carousel-card.left, .carousel-card.right{transform:translateX(-50%) scale(0.8) rotateY(0deg); opacity:0.5;}
+      .carousel-card.left, .carousel-card.right{transform:translateX(-50%) scale(0.75) rotateY(0deg); opacity:0.5;}
     }
   </style>
 </head>
 <body>
 
-  <!-- Fondo -->
   <div class="gradient-background">
     <div class="gradient-sphere sphere-1"></div>
     <div class="gradient-sphere sphere-2"></div>
@@ -88,16 +82,13 @@
     <div class="particles-container" id="particles-container"></div>
   </div>
 
-  <!-- Header -->
   <div class="header-bar">
     <img src="Influboost.png" alt="InfluBoost Logo" class="logo-animado">
   </div>
 
-  <!-- Carrusel -->
   <div class="main-content">
     <div class="carousel-container">
       <div id="carousel">
-        <!-- Plan Básico -->
         <div class="carousel-card basico">
           <div class="title">Plan Básico</div>
           <div class="price">$24.900 ARS</div>
@@ -105,62 +96,50 @@
           <button class="details-btn">Ver Detalles</button>
           <div class="benefits">
             <strong>🔑 Características:</strong><br>
-            • Acceso al panel InfluBoost las 24/7<br>
+            • Acceso al panel InfluBoost 24/7<br>
             • Nivel inicial: <b>Miembro Bronce</b><br>
             • Nuevo pedido, servicios y control de historial<br>
             • Agregar saldo automático y manual<br>
             • API disponible para automatizar pedidos<br>
             • Crear tickets de soporte y ayuda por correo<br><br>
-
             <strong>💰 Métodos de recarga:</strong><br>
             • Automáticos: Mercado Pago, PayPal, Cryptomus, Dodo<br>
             • Manuales: Yape, Binance, Prexpe<br><br>
-
             <strong>📊 Beneficios:</strong><br>
             • Panel fácil de usar en español<br>
             • Precios mayoristas en todos los servicios<br>
             • Promociones activas (hasta 50% OFF)<br>
             • Estadísticas de saldo, pedidos y nivel<br><br>
-
             <strong>🏆 Nivel del usuario:</strong><br>
             • Comienza como <b>Miembro Bronce</b><br>
             • Posibilidad de subir a Plata, Oro y más<br><br>
-
             <strong>🚀 Ideal para:</strong><br>
             • Emprendedores que recién empiezan<br>
             • Usuarios que quieren probar el panel<br>
             • Personas que buscan gestión fácil de SMM<br><br>
-
             <b>💲 Valor: $24.900 ARS</b>
           </div>
         </div>
 
-        <!-- Plan Pro -->
         <div class="carousel-card pro">
           <div class="title">Plan Pro</div>
           <div class="price">$39.900 ARS</div>
           <div class="desc">Variedad más amplia, precios más bajos, estabilidad aceptable.</div>
           <button class="details-btn">Ver Detalles</button>
-          <div class="benefits">
-            🔑 Características y beneficios completos para Plan Pro aquí.
-          </div>
+          <div class="benefits">🔑 Características y beneficios completos para Plan Pro aquí.</div>
         </div>
 
-        <!-- Plan Premium -->
         <div class="carousel-card premium">
           <div class="title">Plan Premium</div>
           <div class="price">$64.900 ARS</div>
           <div class="desc">Panel top, soporte rápido, pensado para revendedores serios.</div>
           <button class="details-btn">Ver Detalles</button>
-          <div class="benefits">
-            🔑 Características y beneficios completos para Plan Premium aquí.
-          </div>
+          <div class="benefits">🔑 Características y beneficios completos para Plan Premium aquí.</div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Modal -->
   <div id="modal" class="modal">
     <div class="modal-content">
       <span class="close-btn">&times;</span>
@@ -172,7 +151,7 @@
   <script>
     const carousel = document.getElementById('carousel');
     const cards = carousel.querySelectorAll('.carousel-card');
-    let current = 1; // Plan Pro activo al cargar
+    let current = 1; 
     function updateCarousel() {
       cards.forEach((card,i)=>{
         card.classList.remove('active','left','right');
